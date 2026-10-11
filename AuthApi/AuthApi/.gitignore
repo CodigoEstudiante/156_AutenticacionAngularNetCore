@@ -1,0 +1,8 @@
+# Ignorar carpetas de compilación (Obligatorio)
+[Bb]in/
+[Oo]bj/
+
+# Ignorar archivos del entorno de desarrollo
+.vs/
+.vscode/
+*.user

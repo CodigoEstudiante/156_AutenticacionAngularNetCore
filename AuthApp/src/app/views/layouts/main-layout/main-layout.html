@@ -1,0 +1,18 @@
+<div class="layout-container">
+    <mat-toolbar>
+        <span>My App</span>
+
+        <span class="example-spacer"></span>
+
+
+        @for (menu of authService.currentUser()?.menus; track menu.link) {
+        <a mat-button [routerLink]="menu.link">{{menu.name}}</a>
+        }
+
+        <button matButton="outlined" (click)="logout()">Log out</button>
+    </mat-toolbar>
+
+    <main class="content-wrapper">
+        <router-outlet></router-outlet>
+    </main>
+</div>

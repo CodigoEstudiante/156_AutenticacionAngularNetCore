@@ -1,0 +1,35 @@
+@AuthApi_HostAddress = http://localhost:5110
+
+GET {{AuthApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+# name, string email, string password, int idRole
+ POST {{AuthApi_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "name":"admin",
+  "email":"admin@demo.com",
+  "password":"12345",
+  "idRole": 1
+}
+
+###
+
+POST {{AuthApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  //LoginRequest
+}
+
+###
+
+GET {{AuthApi_HostAddress}}/api/auth/me
+
+###
+
+POST {{AuthApi_HostAddress}}/api/auth/logout
+
+###
